@@ -1,0 +1,108 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', monospace;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #1f1c3a, #0d0b16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section container */
+.clock-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Frosted-glass clock card */
+.clock-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Time grid */
+.time-grid {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each time block */
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Digits */
+.time {
+  font-size: clamp(50px, 12vw, 120px);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #0ff, 0 0 16px #0ff55;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  min-width: 70px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Labels */
+.label {
+  font-size: clamp(10px, 2vw, 16px);
+  color: #ccc;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+/* Separator */
+.separator {
+  font-size: clamp(50px, 10vw, 120px);
+  color: #0ff;
+  font-weight: 700;
+  text-shadow: 0 0 4px #0ff, 0 0 12px #0ff33;
+}
+
+/* AM/PM */
+.ampm {
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 700;
+  color: #f9d924;
+  margin-left: 8px;
+  text-shadow: 0 0 6px #f9d924, 0 0 14px #f9d92488;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .clock-card {
+    padding: 20px 20px;
+  }
+  .time {
+    min-width: 50px;
+  }
+  .separator {
+    font-size: clamp(40px, 10vw, 60px);
+  }
+}
